@@ -75,9 +75,9 @@ const Home = () => {
         {/* <Header /> */}
         <div className="flex items-center justify-between w-full gap-2 static top-0 left-0">
           <div className="flex items-center gap-2">
-            <span className="block text-xl font-bold">Today</span>
+            <span className="block text-xl font-bold">Dia</span>
             <span className="block text-sm text-gray-600 dark:text-gray-400">
-              {new Date().toLocaleDateString("en-US", {
+              {new Date().toLocaleDateString("pt-BR", {
                 month: "short",
                 weekday: "short",
                 day: "numeric",
@@ -124,7 +124,7 @@ const Home = () => {
               <input
                 type="text"
                 className="text-base font-medium outline-none disabled:cursor-not-allowed disabled:opacity-40 bg-transparent"
-                placeholder="Task Name"
+                placeholder="Nome da tarefa"
                 value={formData.task}
                 disabled={formLoading}
                 autoFocus
@@ -136,7 +136,7 @@ const Home = () => {
                 }
               />
               <textarea
-                placeholder="Description"
+                placeholder="Descrição..."
                 className="text-sm outline-none h-auto focus:h-[200px] dark:border-dark-100 focus:border focus:rounded focus:p-2 transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-40 bg-transparent"
                 disabled={formLoading}
                 value={formData.description}
@@ -154,14 +154,14 @@ const Home = () => {
                     className="flex items-center gap-2 text-green-500 border dark:border-dark-100 rounded-md py-1 px-2 text-sm hover:bg-gray-100 dark:hover:bg-dark-100"
                   >
                     <Calendar1Icon className="text-base" />
-                    Today
+                  Calendario
                   </button>
                   <button
                     type="button"
                     className="flex items-center gap-2  text-blue-500 border dark:border-dark-100 rounded-md py-1 px-2 text-sm hover:bg-gray-100 dark:hover:bg-dark-100"
                   >
                     <InboxIcon className="text-base" />
-                    Inbox
+                    Tarefas
                   </button>
                 </div>
                 <div className="flex items-center gap-2">
@@ -194,7 +194,7 @@ const Home = () => {
                   setShowTaskInput(false);
                 }}
               >
-                Cancel
+                Cancelar
               </button>
               <button
                 type="submit"
@@ -204,10 +204,10 @@ const Home = () => {
                 {isLoading ? (
                   <span className="flex items-center gap-2">
                     <SpinnerIcon className="animate-spin" />
-                    <span>Loading...</span>
+                    <span>Carregando...</span>
                   </span>
                 ) : (
-                  "Add task"
+                  "Adicionar"
                 )}
               </button>
             </div>
@@ -230,7 +230,7 @@ const Home = () => {
                   <AddIcon />
                 </span>
                 <span className="group-hover:text-primary dark:text-gray-400">
-                  Add task
+                  Adicionar tarefa
                 </span>
               </button>
             )}
@@ -241,7 +241,8 @@ const Home = () => {
             {!showTaskInput && (
               <div className="flex items-center flex-col gap-2">
                 <NoTaskIcon className="text-primary w-full max-w-[208px] mx-auto object-cover" />
-                <p>Enjoy your day off</p>
+                <p>
+Aproveite o seu dia de folga</p>
               </div>
             )}
           </>

@@ -139,10 +139,10 @@ const Header = ({ openSidebar, setOpenSidebar }) => {
                   <div className="flex w-full items-center justify-between py-3 px-4">
                     <div className="bg-gray-100 p-1 rounded-full">
                       <button className="px-3 py-1 font-bold bg-white rounded-full">
-                        Notification
+                       Notificação
                       </button>
                       <button className="px-3 py-1 font-bold bg-transparent text-black/50 rounded-full">
-                        Unread
+                        Não lidas
                       </button>
                     </div>
                     <button className="text-3xl aspect-square block p-2 rounded transition-all flex-shrink-0 text-black/50">
@@ -199,7 +199,7 @@ const Header = ({ openSidebar, setOpenSidebar }) => {
                       <div className="px-1 py-2">
                         <div className="flex item-center gap-2 dark:text-gray-200/80 text-black/60 ">
                           <SettingIcon className="text-xl dark:text-gray-200/80 text-black/40 " />
-                          <div className="text-sm">Setting</div>
+                          <div className="text-sm">Configurações</div>
                         </div>
                       </div>
                     </div>
@@ -207,33 +207,33 @@ const Header = ({ openSidebar, setOpenSidebar }) => {
                   <div className="px-1 py-2 border-b dark:border-white/20 flex flex-col gap-4">
                     <div className="flex item-center gap-2 dark:text-gray-200/80 text-black/60 hover:bg-gray-100 dark:hover:bg-gray-100/10 rounded py-1 px-2">
                       <ThemeIcon className="text-xl dark:text-gray-200/80 text-black/40 " />
-                      <div className="text-sm">Theme</div>
+                      <div className="text-sm">Themas</div>
                     </div>
                     <div className="flex item-center gap-2 dark:text-gray-200/80 text-black/60 hover:bg-gray-100 dark:hover:bg-gray-100/10 rounded py-1 px-2">
                       <ActivityIcon className="text-xl dark:text-gray-200/80 text-black/40 " />
-                      <div className="text-sm">Activity Logs</div>
+                      <div className="text-sm">Analitics</div>
                     </div>
                     <div className="flex item-center gap-2 dark:text-gray-200/80 text-black/60 hover:bg-gray-100 dark:hover:bg-gray-100/10 rounded py-1 px-2">
                       <PrinterIcon className="text-xl dark:text-gray-200/80 text-black/40 " />
-                      <div className="text-sm">Print</div>
+                      <div className="text-sm">Trabalhos</div>
                     </div>
                     <div className="flex item-center gap-2 dark:text-gray-200/80 text-black/60 hover:bg-gray-100 dark:hover:bg-gray-100/10 rounded py-1 px-2">
                       <LibraryAddIcon className="text-xl dark:text-gray-200/80 text-black/40 " />
-                      <div className="text-sm">Integration</div>
+                      <div className="text-sm">Adicionar</div>
                     </div>
                   </div>
                   <div className="px-1 py-2 border-b dark:border-white/20 flex flex-col gap-4">
                     <div className="flex item-center gap-2 dark:text-gray-200/80 text-black/60 hover:bg-gray-100 dark:hover:bg-gray-100/10 rounded py-1 px-2">
                       <StarIcon className="text-xl text-yellow-500 " />
-                      <div className="text-sm">Upgrade to Pro</div>
+                      <div className="text-sm">Favoritos</div>
                     </div>
                     <div className="flex item-center gap-2 dark:text-gray-200/80 text-black/60 hover:bg-gray-100 dark:hover:bg-gray-100/10 rounded py-1 px-2">
                       <UsersIcon className="text-xl text-violet-700 " />
-                      <div className="text-sm">Upgrade to Business</div>
+                      <div className="text-sm">Equipe</div>
                     </div>
                     <div className="flex item-center gap-2 dark:text-gray-200/80 text-black/60 hover:bg-gray-100 dark:hover:bg-gray-100/10 rounded py-1 px-2">
                       <MobileIcon className="text-xl dark:text-gray-200/80 text-black/40 " />
-                      <div className="text-sm">Download Apps</div>
+                      <div className="text-sm">Download App</div>
                     </div>
                   </div>
                   <button
@@ -241,7 +241,7 @@ const Header = ({ openSidebar, setOpenSidebar }) => {
                     onClick={logout}
                   >
                     <LogoutIcon className="text-xl dark:text-gray-200/80 text-black/40 " />
-                    <div className="text-sm">Logout</div>
+                    <div className="text-sm">Sair</div>
                   </button>
                 </div>
               )}

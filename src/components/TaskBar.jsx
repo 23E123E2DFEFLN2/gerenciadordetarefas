@@ -88,7 +88,7 @@ const TaskBar = ({ task, tasks, setTasks }) => {
             <input
               type="text"
               className="text-base font-medium outline-none disabled:cursor-not-allowed disabled:opacity-40 bg-transparent"
-              placeholder="Task Name"
+              placeholder="Nome da tarefa"
               value={formData.task}
               disabled={formLoading}
               autoFocus
@@ -100,7 +100,7 @@ const TaskBar = ({ task, tasks, setTasks }) => {
               }
             />
             <textarea
-              placeholder="Description"
+              placeholder="Descrição..."
               className="text-sm outline-none h-auto focus:h-[200px] focus:border dark:border-white/20  focus:rounded focus:p-2 transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-40 bg-transparent"
               disabled={formLoading}
               value={formData.description}
@@ -118,14 +118,14 @@ const TaskBar = ({ task, tasks, setTasks }) => {
                   className="flex items-center gap-2 text-green-500 border dark:border-white/20 rounded-md py-1 px-2 text-sm hover:bg-gray-100 dark:hover:bg-dark-100"
                 >
                   <Calendar1Icon className="text-base" />
-                  Today
+                  Calendario
                 </button>
                 <button
                   type="button"
                   className="flex items-center gap-2  text-blue-500 border dark:border-white/20 rounded-md py-1 px-2 text-sm hover:bg-gray-100 dark:hover:bg-dark-100"
                 >
                   <InboxIcon className="text-base" />
-                  Inbox
+                  Tarefas
                 </button>
               </div>
               <div className="flex items-center gap-2">
@@ -158,7 +158,7 @@ const TaskBar = ({ task, tasks, setTasks }) => {
                 setEdit(false);
               }}
             >
-              Cancel
+              Cancelar
             </button>
             <button
               type="submit"
@@ -168,10 +168,10 @@ const TaskBar = ({ task, tasks, setTasks }) => {
               {isLoading ? (
                 <span className="flex items-center gap-2">
                   <SpinnerIcon className="animate-spin" />
-                  <span>Loading...</span>
+                  <span>carregando...</span>
                 </span>
               ) : (
-                "Modify Task"
+                "Editar tarefas"
               )}
             </button>
           </div>
@@ -213,7 +213,7 @@ const TaskBar = ({ task, tasks, setTasks }) => {
             </div>
             <div className="flex items-center gap-1">
               <span className="text-sm text-black/60 dark:text-white/50 ">
-                Index
+                Tarefas
               </span>
               <InboxIcon className="text-blue-500 text-xs" />
             </div>

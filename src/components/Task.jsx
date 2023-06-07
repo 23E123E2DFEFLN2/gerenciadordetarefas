@@ -185,7 +185,7 @@ const Task = ({ userID, taskID, tasks, setTasks }) => {
                       <input
                         type="text"
                         className="text-base font-medium outline-none disabled:cursor-not-allowed disabled:opacity-40 bg-transparent"
-                        placeholder="Task Name"
+                        placeholder="Nome da tarefa"
                         value={formData.task}
                         disabled={formLoading}
                         autoFocus
@@ -197,7 +197,7 @@ const Task = ({ userID, taskID, tasks, setTasks }) => {
                         }
                       />
                       <textarea
-                        placeholder="Description"
+                        placeholder="Descrição"
                         className="text-sm outline-none h-auto focus:h-[200px] dark:border-dark-100 focus:border focus:rounded focus:p-2 transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-40 bg-transparent"
                         disabled={formLoading}
                         value={formData.description}
@@ -215,14 +215,14 @@ const Task = ({ userID, taskID, tasks, setTasks }) => {
                             className="flex items-center gap-2 text-green-500 border dark:border-dark-100 rounded-md py-1 px-2 text-sm hover:bg-gray-100 dark:hover:bg-dark-100"
                           >
                             <Calendar1Icon className="text-base" />
-                            Today
+                            Calendario
                           </button>
                           <button
                             type="button"
                             className="flex items-center gap-2  text-blue-500 border dark:border-dark-100 rounded-md py-1 px-2 text-sm hover:bg-gray-100 dark:hover:bg-dark-100"
                           >
                             <InboxIcon className="text-base" />
-                            Inbox
+                            Tarefas
                           </button>
                         </div>
                         <div className="flex items-center gap-2">
@@ -255,7 +255,7 @@ const Task = ({ userID, taskID, tasks, setTasks }) => {
                           setEdit(false);
                         }}
                       >
-                        Cancel
+                        Cancelar
                       </button>
                       <button
                         type="submit"
@@ -265,10 +265,10 @@ const Task = ({ userID, taskID, tasks, setTasks }) => {
                         {isLoading ? (
                           <span className="flex items-center gap-2">
                             <SpinnerIcon className="animate-spin" />
-                            <span>Loading...</span>
+                            <span>carregando...</span>
                           </span>
                         ) : (
-                          "Edit Task"
+                          "Editar tarefa"
                         )}
                       </button>
                     </div>
@@ -293,7 +293,7 @@ const Task = ({ userID, taskID, tasks, setTasks }) => {
                     </button>
                   </div>
                 )}
-                <h2>Sub Tasks</h2>
+                <h2>Sub tarefa</h2>
                 {/* tasks list */}
                 <Reorder.Group
                   as="ul"
@@ -325,7 +325,7 @@ const Task = ({ userID, taskID, tasks, setTasks }) => {
                       <input
                         type="text"
                         className="text-base font-medium outline-none disabled:cursor-not-allowed disabled:opacity-40 bg-transparent"
-                        placeholder="Task Name"
+                        placeholder="Nome da tarefa"
                         value={subTaskFormData.task}
                         disabled={formLoading}
                         autoFocus
@@ -337,7 +337,7 @@ const Task = ({ userID, taskID, tasks, setTasks }) => {
                         }
                       />
                       <textarea
-                        placeholder="Description"
+                        placeholder="Descriçao"
                         className="text-sm outline-none h-auto focus:h-[200px] focus:border dark:border-white/20  focus:rounded focus:p-2 transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-40 bg-transparent"
                         disabled={formLoading}
                         value={subTaskFormData.description}
@@ -355,14 +355,14 @@ const Task = ({ userID, taskID, tasks, setTasks }) => {
                             className="flex items-center gap-2 text-green-500 border dark:border-white/20 rounded-md py-1 px-2 text-sm hover:bg-gray-100 dark:hover:bg-dark-100"
                           >
                             <Calendar1Icon className="text-base" />
-                            Today
+                            Calendario
                           </button>
                           <button
                             type="button"
                             className="flex items-center gap-2  text-blue-500 border dark:border-white/20 rounded-md py-1 px-2 text-sm hover:bg-gray-100 dark:hover:bg-dark-100"
                           >
                             <InboxIcon className="text-base" />
-                            Inbox
+                            Tarefa
                           </button>
                         </div>
                         <div className="flex items-center gap-2">
@@ -395,7 +395,7 @@ const Task = ({ userID, taskID, tasks, setTasks }) => {
                           setShowInput(false);
                         }}
                       >
-                        Cancel
+                        Cancelar
                       </button>
                       <button
                         type="submit"
@@ -405,10 +405,10 @@ const Task = ({ userID, taskID, tasks, setTasks }) => {
                         {isLoading ? (
                           <span className="flex items-center gap-2">
                             <SpinnerIcon className="animate-spin" />
-                            <span>Loading...</span>
+                            <span>carregando...</span>
                           </span>
                         ) : (
-                          "Edit Task"
+                          "Editar tarefa"
                         )}
                       </button>
                     </div>
@@ -421,7 +421,7 @@ const Task = ({ userID, taskID, tasks, setTasks }) => {
                       onClick={() => setShowInput(true)}
                     >
                       <AddIcon className="text-sm font-medium" />
-                      Add sub-task
+                      Adiconar subtarefa
                     </button>
                   </div>
                 )}
@@ -435,13 +435,14 @@ const Task = ({ userID, taskID, tasks, setTasks }) => {
                     className="h-52"
                   />
                   <h2 className="text-center w-full font-medium text-xl">
-                    Unable To Find this task.
+                    Não foi possível encontrar esta tarefa.
+
                   </h2>
                   <button
                     className="px-4 py-2 rounded-full bg-primary hover:bg-red-600 text-white font-medium"
                     onClick={() => window.location.reload()}
                   >
-                    Refresh This Page
+                   Atualizar esta página
                   </button>
                 </div>
               </div>

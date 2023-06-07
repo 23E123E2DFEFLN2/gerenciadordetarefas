@@ -20,7 +20,7 @@ const Login = () => {
           className="bg-white dark:bg-dark-100 hover:bg-gray-300 hover:scale-110 transition-all py-2 px-4 flex items-center gap-2 rounded-lg font-medium"
         >
           <GoogleIcon />
-          Login With Google
+          Entre com o Google
         </button>
       </div>
     </div>

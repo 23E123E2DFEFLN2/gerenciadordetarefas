@@ -10,15 +10,17 @@ const NotFound = () => {
           alt="not found"
           className="w-[500px]"
         />
-        <h1 className="font-bold text-3xl">Hmmm, that page doesn’t exist.</h1>
+        <h1 className="font-bold text-3xl">
+Hmmm, essa página não existe.</h1>
         <p className="text-xl font-medium">
-          Get back to organizing work and life.
+        
+Volte a organizar o trabalho e a vida.
         </p>
         <Link
           className="px-6 py-2 my-3 text-lg bg-primary hover:bg-red-500 text-white font-medium rounded-lg"
           to="/"
         >
-          Home
+          Inicio
         </Link>
       </div>
     </div>
