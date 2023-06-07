@@ -1,34 +1,94 @@
-# Gerenciador de Tarefas com React e Firebase
+![Todoist Firebase](public/images/open-graph.png)
 
-Este é um projeto de um Gerenciador de Tarefas desenvolvido em React, utilizando o Firebase para armazenar os dados. A aplicação permite que os usuários criem, visualizem, atualizem e excluam tarefas em um ambiente de lista de afazeres.
+# Todoist Firebase
 
-## Funcionalidades
+Todoist Firebase is Todoist Clone made with React JS and Firebase. This tools will help you to organize your life and works and maintain the tasks you want to performed in upcoming time.
 
-- Cadastro de tarefas com título, descrição e data de conclusão.
-- Visualização das tarefas em uma lista ordenada.
-- Atualização das informações de uma tarefa existente.
-- Exclusão de tarefas da lista.
+## Live Website URL
 
-## Tecnologias Utilizadas
+https://todoist-firebase.vercel.app/
 
-- React: Biblioteca JavaScript para a construção da interface do usuário.
-- Firebase: Plataforma de desenvolvimento de aplicativos móveis e web da Google, utilizada para armazenar os dados das tarefas.
-- React Router: Biblioteca para gerenciamento de rotas no React.
-- Material-UI: Biblioteca de componentes para a construção de interfaces modernas.
-- Outras dependências do React e do Firebase conforme necessário.
+## How to setup
 
-## Como Executar
+1. Clone the reposetry to your system.
 
-1. Clone este repositório em sua máquina local.
-2. Instale as dependências do projeto executando o comando `npm install`.
-3. Configure as credenciais do Firebase no arquivo `src/firebase.js`.
-4. Inicie a aplicação com o comando `npm start`.
-5. Acesse a aplicação no seu navegador através do endereço `http://localhost:3000`.
+```bash
+  git clone https://github.com/theviralboy/todoist-firebase
+```
 
-## Contribuição
+2. Change the directory to the **todoist-firebase**.
 
-Contribuições são bem-vindas! Se você encontrar algum problema, tiver alguma sugestão ou quiser adicionar alguma funcionalidade, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+```bash
+  cd todoist-firebase
+```
 
-## Licença
+3. Install all the packages.
 
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo `LICENSE` para obter mais informações.
+```bash
+  npm i # or yarn install if you're using yarn
+```
+
+4. Open the VS Code in the this folder.
+
+```bash
+  code .
+```
+
+5. Create **.env** file according to the **.env.example** file with your Firebase credentials.
+6. Go to the **[Firebase](https://firebase.google.com/)** and create a new project.
+7. Copy and paste the credentials on the **.env** file.
+8. Enable **Firestore** and **Authentication**.
+9. Select **Google Authentication** on the **Authentication services**.
+10. Now start the server.
+
+```bash
+  npm start # or yarn start if you're using yarn
+```
+
+## Screenshots
+
+### Light Theme
+
+#### Home
+
+![Home](screenshots/home-light.png)
+
+#### Task
+
+![Task](screenshots/task-light.png)
+
+### Dark Theme
+
+#### Home
+
+![Home](screenshots/home-dark.png)
+
+#### Task
+
+![Task](screenshots/task-dark.png)
+
+## Features
+
+### Responsive Design
+
+![Responsive Design](screenshots/resposive.png)
+
+### User Authentication
+
+![Login](screenshots/login.png)
+
+### Dark Theme Toggle
+
+![Dark Theme Toggle](screenshots/theme-toggle.gif)
+
+### Task Dragging
+
+![Task Dragging](screenshots/task-drag.gif)
+
+## Tech Stack
+
+React JS, Tailwind CSS, Framer Motion, Firebase 9.
+
+## Feedback
+
+If you have any feedback, please reach out to us at sahilverma.webdev@gmail.com
