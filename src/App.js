@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Container, Typography, Button } from '@mui/material';
+import ProjectForm from './components/ProjectForm';
+import ProjectList from './components/ProjectList';
+import ProjectDetails from './components/ProjectDetails';
 
-function App() {
+const App = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isEditing, setIsEditing] = useState(false);
+
+  const handleSelectProject = (project) => {
+    setSelectedProject(project);
+  };
+
+  const handleEditProject = (project) => {
+    setSelectedProject(project);
+    setIsEditing(true);
+  };
+
+  const handleAddProject = () => {
+    setSelectedProject(null);
+    setIsEditing(true);
+  };
+
+  const handleBack = () => {
+    setSelectedProject(null);
+    setIsEditing(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Typography variant="h3">Project Manager</Typography>
+      {isEditing ? (
+        <>
+          <Button onClick={handleBack}>Back</Button>
+          <ProjectForm projectId={selectedProject ? selectedProject.id : null} onSubmit={handleBack} />
+        </>
+      ) : (
+        <>
+          <Button onClick={handleAddProject}>Add Project</Button>
+          <ProjectList onEdit={handleEditProject} />
+        </>
+      )}
+      {selectedProject && !isEditing && <ProjectDetails project={selectedProject} onBack={handleBack} />}
+    </Container>
   );
-}
+};
 
 export default App;
